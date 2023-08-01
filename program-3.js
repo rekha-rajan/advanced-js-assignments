@@ -30,10 +30,6 @@ function displayObject(obj) {
                     console.log(element);
                 }
             });
-        } else if (typeof value === 'object' && value !== null) {
-            for (const key2 in value) {
-                console.log(key2 + ': ' + value[key2]);
-            }
         } else {
             console.log(key + ': ' + value);
         }
