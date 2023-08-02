@@ -28,5 +28,11 @@ fetch('https://jsonplaceholder.typicode.com/posts', {
     headers: { "Content-type": "application/json; charset=UTF-8" }
 })
 .then(response => response.json())
-.then(json => console.log(json))
+.then(json => {
+    for (const key in json) {
+        if (json.hasOwnProperty(key)) {
+            console.log(key + ": " + json[key]);
+        }
+    }
+})
 .catch (err => console.log(err));
